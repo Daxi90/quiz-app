@@ -71,6 +71,7 @@ let rightQuestions = 0;
 
 function showQuestion() {
   if (currentQuestion >= questions.length) {
+    //SHOW ENDSCREEN
     console.log('ende');
     document.getElementById('endScreen').classList.remove('d-none');
     document.getElementById('question-body').classList.add('d-none');
@@ -79,7 +80,14 @@ function showQuestion() {
     document.getElementById('amountOfRightQuestions').innerHTML = rightQuestions;
     document.getElementById('header-image').src = './img/trophy.png'
 
-  } else {
+  } else { // SHOW QUESTION
+
+    let percent = ((currentQuestion + 1) / questions.length) * 100;
+    percent = Math.round(percent);
+    document.getElementById('progress-bar').innerHTML = `${percent} %`;
+    document.getElementById('progress-bar').style = `width: ${percent}%;`;
+
+
     let actualQuestion = questions[currentQuestion];
 
     let question = document.getElementById("question");

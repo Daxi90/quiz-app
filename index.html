@@ -30,13 +30,29 @@
     </nav>
     <div class="container d-flex justify-content-center align-items-center">
       <div class="card quiz-card">
-        <img id="header-image" src="./img/quiz.jpg" class="card-img-top" alt="..." />
+        <img
+          id="header-image"
+          src="./img/quiz.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div
+        id="progress-bar"
+        class="progress"
+        role="progressbar"
+      >
+        <div class="progress-bar" style="width: 25%">25%</div>
+      </div>
         <div class="card-body d-none text-center" id="endScreen">
           <div>Quiz beendet</div>
 
-          <div>Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von <b id="amountOfQuestions">XXX</b> richtig beantwortet</div>
+          <div>
+            Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von
+            <b id="amountOfQuestions">XXX</b> richtig beantwortet
+          </div>
         </div>
         <div class="card-body" id="question-body">
+
           <h5 class="card-title" id="question">Frage</h5>
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
             <div class="card-body" id="answer_1">Antwort</div>
