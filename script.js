@@ -77,6 +77,7 @@ function showQuestion() {
 
     document.getElementById('amountOfQuestions').innerHTML = questions.length;
     document.getElementById('amountOfRightQuestions').innerHTML = rightQuestions;
+    document.getElementById('header-image').src = './img/trophy.png'
 
   } else {
     let actualQuestion = questions[currentQuestion];
